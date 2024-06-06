@@ -200,7 +200,7 @@ form button {
     padding: 2em 1em;
     max-width: 800px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: black;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -255,4 +255,37 @@ form button {
 
 #contact-form button:hover {
     background-color: #555;
+}
+#projects {
+    padding: 20px;
+    background-color: black;
+}
+
+#projects h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.project h2 {
+    margin-top: 0;
+}
+
+.project p {
+    margin: 0;
+    text-align: justify;
 }
