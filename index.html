@@ -1,128 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="correct.css">
-</head>
-<body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="logo_trial.png" class="logo" alt="Logo">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://github.com/ddddaaaavvvviiiiddddnnnn" target="_blank">GitHub</a></li>
-                    <li><a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a></li>
-                </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>personal portfolio</title>
+        <link rel="stylesheet" href="style.css">
+         <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">David</a>
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="me.html">About</a>
+                <a href="service.html">Services</a>
+                <a href="project.html">Projects</a>
+                <a href="contact.html">Contact</a>
             </nav>
-            <div class="header-text">
-                <p>Full-stack Developer</p>
-                <h1>Hi, I'm <span>David Njoroge</span><br>from Kenya</h1>
-                <button class="btn" onclick="window.open('./project/cv.docx', '_blank')">Download CV</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- About Section -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="pic.jpg" alt="About Me">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="subtitle">About Me</h1>
-                    <p>A talented, motivated, disciplined & self-driven person with qualities in computer programming, excellent communication skills. A professional with work ethics that enables to work in group setting & or individually. I possess a diverse skill set in programming languages such as HTML, Java, PHP, JavaScript, Python, and MySQL, enabling me to develop web-based applications effectively. Beyond my academic pursuits, I excel in interpersonal communication, fostering strong customer relations. Proficient in technology integration, I enhance work efficiency through adept use of Microsoft Word, Excel, PowerPoint, and other tools.</p>
-                    <div class="tab-title">
-                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
-                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
-                        <p class="tab-links" onclick="openTab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Full-stack developer</span></li>
-                            <li>Front-end developer</li>
-                            <li>Back-end developer</li>
-                            <li>Design</li>
-                            <li>Problem solving</li>
-                            <li>Web architecture</li>
-                            <li>Frontend frameworks</li>
-                            <li>Git</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>Full-stack developer</span></li>
-                            <li>Programming scalable and clean code.</li>
-                            <li>Market analysis.</li>
-                            <li>Full-cycle application development.</li>
-                            <li>Designing product development strategies.</li>
-                            <li>Selection of the most suitable technologies.</li>
-                            <li>Development of databases.</li>
-                            <li>Product optimization.</li>
-                            <li>Product demonstration.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2024-2025: ("Computer Programming") at Kenswed Technical & Vocational Training College</span></li>
-                            <li>HTML</li>
-                            <li>PHP</li>
-                            <li>Java</li>
-                            <li>JavaScript</li>
-                            <li>Python</li>
-                        </ul>
-                    </div>
+        </header>
+        <section class="home">
+            <div class="home-content">
+                <h1>Hi, I'm David N Maina</h1>
+                <h3>Full-stack Developer</h3>
+                <p>A talented, motivated, disciplined & self-driven person with qualities in computer programming, excellent communication skills. A professional with work ethics that enables to work in group setting & or individually.</p>
+                <div class="btn-box">
+                    <a href="tel:0748935338">Hire Me</a>
+                    <a href="tel:0748935338">Let's Talk</a>
                 </div>
             </div>
-        </div>
-    </div>
-    <section id="projects">
-        <h1>Projects</h1>
-        <div class="project">
-            <h2>Front-end</h2>
-            <img src="download (1).jpeg" alt="Screenshot of Front-end project">
-            <p>Description of project 1.</p>
-        </div>
-        <div class="project">
-            <h2>Back-end</h2>
-            <img src="download.jpeg" alt="Screenshot of Back-end project">
-            <p>Description of project 2.</p>
-        </div>
-    </section>
-    
-
-    <section id="contact">
-        <h1>Contact</h1>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-    <script>
-        function openTab(tabName) {
-            var tabLinks = document.getElementsByClassName("tab-links");
-            var tabContents = document.getElementsByClassName("tab-contents");
-            for (var tabLink of tabLinks) {
-                tabLink.classList.remove("active-link");
+            <div class="home-sci">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ddddaaaavvvviiiiddddnnnn"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <span class="home-imghover"></span>
+        </section>
+        <script>
+            var sidemenu = document.getElementById("sidemenu");
+            function openmenu() {
+                sidemenu.style.right = "0";
             }
-            for (var tabContent of tabContents) {
-                tabContent.classList.remove("active-tab");
+            function closemenu() {
+                sidemenu.style.right = "-200px";
             }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabName).classList.add("active-tab");
-        }
-    </script>
-</body>
+        </script>
+    </body>
 </html>

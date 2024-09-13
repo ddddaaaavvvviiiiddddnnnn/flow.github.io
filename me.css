@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #081b29;
+    color: #ededed;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    position: relative;
+    font-size: 36px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a{
+    font-size: 20px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s ease;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(-2s var(--i));
+}
+
+.navbar a:hover, .navbar a.active{
+    color: #00abf9;
+}
+/* About Section */
+#about{
+        padding: 30px 0;
+        margin-top: 50px;
+        left: 10px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 450px;
+    border-radius: 250px;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.subtitle {
+    font-size: 100%;
+    font-weight: 600;
+    color: aqua;
+}
+
+.tab-title {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #00abf9;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span {
+    color: aqua;
+    font-size: 15px;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* KEYFRAMES ANIMATIONS */
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #081b29;
+    color: #ededed;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    position: relative;
+    font-size: 36px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a{
+    font-size: 20px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s ease;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(-2s var(--i));
+}
+
+.navbar a:hover, .navbar a.active{
+    color: #00abf9;
+}
+
+/* Styling for the Contact section */
+.subtitle{
+    font-size: 40px;
+    font-weight: 300;
+}
+#contact{
+    padding: 30px 0;
+    margin-top: 30px;
+    display: grid;
+    position: fixed;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #00abf0;
+    margin-right: 24px;
+    font-size: 25px;
+}
+
+.btn1{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    border: 3px solid #00abf0;
+    border-radius: 8px;
+    font-size: 25px;
+    padding: 5px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+.btn1:hover{
+    background: #00abf9;
+}
+.contact-right form{
+    width: 100%;
+    margin-right: 14px;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 25px;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #081b29;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 400;
+    color: #ededed;
+}
+form .btn2:hover{
+    background: #00abf9;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.copyright i{
+    color: #ff004f;
+}
+
+
+/* KEYFRAMES ANIMATIONS */
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes slideTop{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

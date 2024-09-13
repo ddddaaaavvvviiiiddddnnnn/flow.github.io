@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>personal portfolio</title>
+        <link rel="stylesheet" href="me.css">
+         <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">About Me</a>
+            <nav class="navbar">
+                <a href="index.html">Home</a>
+                <a href="#" class="active">About</a>
+                <a href="service.html">Services</a>
+                <a href="project.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                
+            </nav>
+        </header>
+           <!-- About Section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pic.jpg" alt="About Me">
+                </div>
+                <div class="about-col-2">
+                    <p>I possess a diverse skill set in programming languages such as HTML, Java, PHP, JavaScript, Python, and MySQL, enabling me to develop web-based applications effectively. Beyond my academic pursuits, I excel in interpersonal communication, fostering strong customer relations. Proficient in technology integration, I enhance work efficiency through adept use of Microsoft Word, Excel, PowerPoint, and other tools.</p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience</p>
+                        <p class="tab-links" onclick="openTab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UX/UI Design</span></li>
+                            <li>Front-end developer</li>
+                            <li>Back-end developer</li>
+                            <li>Design</li>
+                            <li>Problem solving</li>
+                            <li>Web architecture</li>
+                            <li>Frontend frameworks</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Full-stack developer</span></li>
+                            <li>Programming scalable and clean code.</li>
+                            <li>Market analysis.</li>
+                            <li>Full-cycle application development.</li>
+                            <li>Designing product development strategies.</li>
+                            <li>Selection of the most suitable technologies.</li>
+                            <li>Development of databases.</li>
+                            <li>Product optimization.</li>
+                            <li>Product demonstration.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2024-2025: ("Computer Programming") at Kenswed Technical & Vocational Training College</span></li>
+                            <li>HTML</li>
+                            <li>PHP</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openTab(tabName) {
+            var tabLinks = document.getElementsByClassName("tab-links");
+            var tabContents = document.getElementsByClassName("tab-contents");
+            for (var tabLink of tabLinks) {
+                tabLink.classList.remove("active-link");
+            }
+            for (var tabContent of tabContents) {
+                tabContent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabName).classList.add("active-tab");
+        }
+    </script>
+    </body>
+</html>
